@@ -30,3 +30,10 @@ explore: ext_master_xref_v1_sb {
     sql_on: ${ext_master_xref_v1_sb.master_puid}  = ${vw_tbl_property.puid};;
   }
 }
+explore: master_records_v1 {
+  join: master_xref_v1 {
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${master_records_v1.master_puid} = ${master_xref_v1.master_puid};;
+  }
+}
