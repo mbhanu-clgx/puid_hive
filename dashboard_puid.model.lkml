@@ -21,3 +21,12 @@ explore: agg_puid_counts {
   }
 }
 explore: agg_puid_counts_v1 {}
+explore: vw_tbl_property {}
+explore: master_xref_v1 {}
+explore: ext_master_xref_v1_sb {
+  join: vw_tbl_property {
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${ext_master_xref_v1_sb.master_puid}  = ${vw_tbl_property.puid};;
+  }
+}
