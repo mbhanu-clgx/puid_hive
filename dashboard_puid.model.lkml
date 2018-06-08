@@ -37,3 +37,4 @@ explore: master_records_v1 {
     sql_on: ${master_records_v1.master_puid} = ${master_xref_v1.master_puid};;
   }
 }
+explore: agg_puid_distinct_counts {}

@@ -572,6 +572,11 @@ view: master_records_v1 {
     type: number
     sql: ${TABLE}.situs_longitude_pb ;;
   }
+  dimension: addressLatLong {
+    type: location
+    sql_latitude:  ${TABLE}.situs_latitude;;
+    sql_longitude: ${TABLE}.situs_longitude;;
+  }
 
   dimension: situs_state {
     type: string
