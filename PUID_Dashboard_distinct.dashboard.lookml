@@ -5,10 +5,10 @@
   - title: Active_PUID_Count
     name: Active_PUID_Count
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: single_value
     fields:
-    - agg_puid_distinct_counts.sum_active_puid_cnt
+    - agg_test1.sum_active_puid_cnt
     limit: 500
     query_timezone: America/Los_Angeles
     custom_color_enabled: true
@@ -117,10 +117,10 @@
   - title: Total_PUID_Count
     name: Total_PUID_Count
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: single_value
     fields:
-    - agg_puid_distinct_counts.total_puid_cnt
+    - agg_test1.total_puid_cnt
     limit: 500
     query_timezone: America/Los_Angeles
     custom_color_enabled: true
@@ -228,10 +228,10 @@
   - title: Inactive_PUID_Count
     name: Inactive_PUID_Count
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: single_value
     fields:
-    - agg_puid_distinct_counts.sum_inactive_puid_cnt
+    - agg_test1.sum_inactive_puid_cnt
     limit: 500
     query_timezone: America/Los_Angeles
     custom_color_enabled: true
@@ -340,13 +340,13 @@
   - title: Active PUID Count County
     name: Active PUID Count County
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: table
     fields:
-    - agg_puid_distinct_counts.sum_active_puid_cnt
-    - agg_puid_distinct_counts.cnty_fipscode
+    - agg_test1.sum_active_puid_cnt
+    - agg_test1.cnty_fipscode
     sorts:
-    - agg_puid_distinct_counts.sum_active_puid_cnt desc
+    - agg_test1.sum_active_puid_cnt desc
     limit: 5000
     query_timezone: America/Los_Angeles
     show_view_names: false
@@ -459,13 +459,13 @@
   - title: Active PUID Count State
     name: Active PUID Count State
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: table
     fields:
-    - agg_puid_distinct_counts.statecd
-    - agg_puid_distinct_counts.sum_active_puid_cnt
+    - agg_test1.statecd
+    - agg_test1.sum_active_puid_cnt
     sorts:
-    - agg_puid_distinct_counts.sum_active_puid_cnt desc
+    - agg_test1.sum_active_puid_cnt desc
     limit: 500
     query_timezone: America/Los_Angeles
     show_view_names: false
@@ -578,13 +578,13 @@
   - title: Active PUID Count Tier
     name: Active PUID Count Tier
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: table
     fields:
-    - agg_puid_distinct_counts.sum_active_puid_cnt
-    - agg_puid_distinct_counts.tier
+    - agg_test1.sum_active_puid_cnt
+    - agg_test1.tier
     sorts:
-    - agg_puid_distinct_counts.tier
+    - agg_test1.tier
     limit: 5000
     query_timezone: America/Los_Angeles
     show_view_names: false
@@ -697,16 +697,16 @@
   - title: Active PUID Datasource
     name: Active PUID Datasource
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: looker_column
     fields:
-    - agg_puid_distinct_counts.sum_active_puid_cnt
-    - agg_puid_distinct_counts.datasource_name
+    - agg_test1.sum_active_puid_cnt
+    - agg_test1.datasource_name
     pivots:
-    - agg_puid_distinct_counts.datasource_name
+    - agg_test1.datasource_name
     sorts:
-    - agg_puid_distinct_counts.sum_active_puid_cnt desc 0
-    - agg_puid_distinct_counts.datasource_name
+    - agg_test1.sum_active_puid_cnt desc 0
+    - agg_test1.datasource_name
     limit: 5000
     query_timezone: America/Los_Angeles
     stacking: ''
@@ -820,10 +820,10 @@
   - title: Non-Taxroll PUID Count
     name: Non-Taxroll PUID Count
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: single_value
     fields:
-    - agg_puid_distinct_counts.sum_non_taxroll_new_puid_cnt
+    - agg_test1.sum_non_taxroll_new_puid_cnt
     limit: 5000
     query_timezone: America/Los_Angeles
     custom_color_enabled: true
@@ -984,16 +984,16 @@
   - title: Non-Taxroll PUID BY Datasource
     name: Non-Taxroll PUID BY Datasource
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: looker_pie
     fields:
-    - agg_puid_distinct_counts.sum_non_taxroll_new_puid_cnt
-    - agg_puid_distinct_counts.datasource_name
+    - agg_test1.sum_non_taxroll_new_puid_cnt
+    - agg_test1.datasource_name
     filters:
-      agg_puid_distinct_counts.datasource_name: "-%tax%"
+      agg_test1.datasource_name: "-%tax%"
     sorts:
-    - agg_puid_distinct_counts.sum_non_taxroll_new_puid_cnt desc
-    - agg_puid_distinct_counts.datasource_name
+    - agg_test1.sum_non_taxroll_new_puid_cnt desc
+    - agg_test1.datasource_name
     limit: 5000
     query_timezone: America/Los_Angeles
     value_labels: labels
@@ -1156,13 +1156,13 @@
   - title: Non-Taxroll PUID BY County
     name: Non-Taxroll PUID BY County
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: table
     fields:
-    - agg_puid_distinct_counts.sum_non_taxroll_new_puid_cnt
-    - agg_puid_distinct_counts.cnty_fipscode
+    - agg_test1.sum_non_taxroll_new_puid_cnt
+    - agg_test1.cnty_fipscode
     sorts:
-    - agg_puid_distinct_counts.sum_non_taxroll_new_puid_cnt desc
+    - agg_test1.sum_non_taxroll_new_puid_cnt desc
     limit: 5000
     query_timezone: America/Los_Angeles
     show_view_names: false
@@ -1329,15 +1329,15 @@
   - title: Non-Taxroll PUID BY State
     name: Non-Taxroll PUID BY State
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: looker_line
     fields:
-    - agg_puid_distinct_counts.sum_non_taxroll_new_puid_cnt
-    - agg_puid_distinct_counts.statecd
+    - agg_test1.sum_non_taxroll_new_puid_cnt
+    - agg_test1.statecd
     filters:
-      agg_puid_distinct_counts.datasource_name: "-%tax%"
+      agg_test1.datasource_name: "-%tax%"
     sorts:
-    - agg_puid_distinct_counts.statecd
+    - agg_test1.statecd
     limit: 5000
     query_timezone: America/Los_Angeles
     stacking: percent
@@ -1504,14 +1504,14 @@
   - title: Deactivated PUID BY DataSource
     name: Deactivated PUID BY DataSource
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: looker_area
     fields:
-    - agg_puid_distinct_counts.sum_deactivated_puid_cnt
-    - agg_puid_distinct_counts.datasource_name
+    - agg_test1.sum_deactivated_puid_cnt
+    - agg_test1.datasource_name
     sorts:
-    - agg_puid_distinct_counts.sum_deactivated_puid_cnt desc
-    - agg_puid_distinct_counts.datasource_name
+    - agg_test1.sum_deactivated_puid_cnt desc
+    - agg_test1.datasource_name
     limit: 5000
     query_timezone: America/Los_Angeles
     stacking: percent
@@ -1678,12 +1678,12 @@
   - title: Deactivated PUID Count
     name: Deactivated PUID Count
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: single_value
     fields:
-    - agg_puid_distinct_counts.sum_deactivated_puid_cnt
+    - agg_test1.sum_deactivated_puid_cnt
     sorts:
-    - agg_puid_distinct_counts.sum_deactivated_puid_cnt desc
+    - agg_test1.sum_deactivated_puid_cnt desc
     limit: 5000
     query_timezone: America/Los_Angeles
     custom_color_enabled: true
@@ -1850,13 +1850,13 @@
   - title: Deactivated PUID BY State
     name: Deactivated PUID BY State
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: table
     fields:
-    - agg_puid_distinct_counts.sum_deactivated_puid_cnt
-    - agg_puid_distinct_counts.statecd
+    - agg_test1.sum_deactivated_puid_cnt
+    - agg_test1.statecd
     sorts:
-    - agg_puid_distinct_counts.sum_deactivated_puid_cnt desc
+    - agg_test1.sum_deactivated_puid_cnt desc
     limit: 5000
     query_timezone: America/Los_Angeles
     show_view_names: false
@@ -2023,13 +2023,13 @@
   - title: Deactivated PUID BY County
     name: Deactivated PUID BY County
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: table
     fields:
-    - agg_puid_distinct_counts.cnty_fipscode
-    - agg_puid_distinct_counts.sum_deactivated_puid_cnt
+    - agg_test1.cnty_fipscode
+    - agg_test1.sum_deactivated_puid_cnt
     sorts:
-    - agg_puid_distinct_counts.sum_deactivated_puid_cnt desc
+    - agg_test1.sum_deactivated_puid_cnt desc
     limit: 5000
     query_timezone: America/Los_Angeles
     show_view_names: false
@@ -2196,10 +2196,10 @@
   - title: Corrected PUID Count
     name: Corrected PUID Count
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: single_value
     fields:
-    - agg_puid_distinct_counts.sum_corrected_puid_cnt
+    - agg_test1.sum_corrected_puid_cnt
     limit: 5000
     query_timezone: America/Los_Angeles
     custom_color_enabled: true
@@ -2366,13 +2366,13 @@
   - title: Corrected PUID Count By County
     name: Corrected PUID Count By County
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: table
     fields:
-    - agg_puid_distinct_counts.sum_corrected_puid_cnt
-    - agg_puid_distinct_counts.cnty_fipscode
+    - agg_test1.sum_corrected_puid_cnt
+    - agg_test1.cnty_fipscode
     sorts:
-    - agg_puid_distinct_counts.sum_corrected_puid_cnt desc
+    - agg_test1.sum_corrected_puid_cnt desc
     limit: 5000
     query_timezone: America/Los_Angeles
     show_view_names: false
@@ -2539,13 +2539,13 @@
   - title: Corrected PUID Count By Datasource
     name: Corrected PUID Count By Datasource
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: looker_pie
     fields:
-    - agg_puid_distinct_counts.sum_corrected_puid_cnt
-    - agg_puid_distinct_counts.datasource_name
+    - agg_test1.sum_corrected_puid_cnt
+    - agg_test1.datasource_name
     sorts:
-    - agg_puid_distinct_counts.sum_corrected_puid_cnt desc
+    - agg_test1.sum_corrected_puid_cnt desc
     limit: 5000
     query_timezone: America/Los_Angeles
     value_labels: labels
@@ -2711,13 +2711,13 @@
   - title: Corrected PUID Count By State
     name: Corrected PUID Count By State
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: looker_area
     fields:
-    - agg_puid_distinct_counts.sum_corrected_puid_cnt
-    - agg_puid_distinct_counts.statecd
+    - agg_test1.sum_corrected_puid_cnt
+    - agg_test1.statecd
     sorts:
-    - agg_puid_distinct_counts.statecd desc
+    - agg_test1.statecd desc
     limit: 5000
     query_timezone: America/Los_Angeles
     stacking: percent
@@ -2884,26 +2884,26 @@
   - name: Active_PUIDS_Count_DatasourceCombinations
     title: Active_PUIDS_Count_DatasourceCombinations
     model: dashboard_puid
-    explore: agg_puid_distinct_counts
+    explore: agg_test1
     type: looker_column
     fields:
-    - agg_puid_distinct_counts.cnt_mls
-    - agg_puid_distinct_counts.cnt_ncd
-    - agg_puid_distinct_counts.cnt_trans
-    - agg_puid_distinct_counts.cnt_tax
-    - agg_puid_distinct_counts.cnt_mls_trans
-    - agg_puid_distinct_counts.cnt_mls_tax
-    - agg_puid_distinct_counts.cnt_mls_ncd
-    - agg_puid_distinct_counts.cnt_mls_ncd_tax
-    - agg_puid_distinct_counts.cnt_mls_ncd_trans
-    - agg_puid_distinct_counts.cnt_mls_trans_tax
-    - agg_puid_distinct_counts.cnt_mls_trans_tax_ncd
-    - agg_puid_distinct_counts.cnt_ncd_tax
-    - agg_puid_distinct_counts.cnt_ncd_tax_trans
-    - agg_puid_distinct_counts.cnt_ncd_trans
-    - agg_puid_distinct_counts.cnt_tax_trans
+    - agg_test1.cnt_mls
+    - agg_test1.cnt_ncd
+    - agg_test1.cnt_trans
+    - agg_test1.cnt_tax
+    - agg_test1.cnt_mls_trans
+    - agg_test1.cnt_mls_tax
+    - agg_test1.cnt_mls_ncd
+    - agg_test1.cnt_mls_ncd_tax
+    - agg_test1.cnt_mls_ncd_trans
+    - agg_test1.cnt_mls_trans_tax
+    - agg_test1.cnt_mls_trans_tax_ncd
+    - agg_test1.cnt_ncd_tax
+    - agg_test1.cnt_ncd_tax_trans
+    - agg_test1.cnt_ncd_trans
+    - agg_test1.cnt_tax_trans
     sorts:
-    - agg_puid_distinct_counts.cnt_mls_trans desc
+    - agg_test1.cnt_mls_trans desc
     limit: 500
     query_timezone: America/Los_Angeles
     stacking: ''
@@ -2934,10 +2934,10 @@
     - 'palette: Santa Cruz'
     series_colors: {}
     hidden_fields:
-    - agg_puid_distinct_counts.cnt_mls
-    - agg_puid_distinct_counts.cnt_ncd
-    - agg_puid_distinct_counts.cnt_trans
-    - agg_puid_distinct_counts.cnt_tax
+    - agg_test1.cnt_mls
+    - agg_test1.cnt_ncd
+    - agg_test1.cnt_trans
+    - agg_test1.cnt_tax
     row: 10
     col: 0
     width: 24
