@@ -40,6 +40,20 @@ explore: master_records_v1 {
     relationship: one_to_many
     sql_on: ${master_records_v1.master_puid} = ${master_xref_v1.master_puid};;
   }
+
+  join: vw_tbl_property {
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${master_records_v1.master_puid} = ${vw_tbl_property.puid};;
+
+  }
+  join: asset_overlay_entity_enriched_attribute_v0001 {
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${master_records_v1.master_puid} = ${asset_overlay_entity_enriched_attribute_v0001.property_id} ;;
+  }
 }
 explore: agg_puid_distinct_counts {}
 explore: agg_test1 {}
+
+explore: puid_sampledata {}

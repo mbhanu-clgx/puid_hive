@@ -52,7 +52,20 @@ view: agg_test1 {
     sql: ${TABLE}.tier ;;
   }
 ################################
+measure: sum_active_puid_mls_ncd_tax_trans {
+  type: number
+  sql:SUM(CASE when datasource_name IN ('mls','trans', 'tax','ncd') then active_puid_cnt else null end);;
+}
 
+  measure: sum_inactive_puid_mls_ncd_tax_trans {
+    type: number
+    sql:SUM(CASE when datasource_name IN ('mls','trans', 'tax','ncd') then inactive_puid_cnt else null end);;
+  }
+
+  measure: sum_total_puid_mls_ncd_tax_trans {
+    type: number
+    sql:${sum_active_puid_mls_ncd_tax_trans} + ${sum_inactive_puid_mls_ncd_tax_trans};;
+  }
   measure: puid_by_datasource_name {
     type: sum
     sql: ${TABLE}.active_puid_cnt ;;
@@ -64,13 +77,7 @@ view: agg_test1 {
 
   measure: sum_active_puid_cnt {
     type: sum
-
     sql: ${TABLE}.active_puid_cnt ;;
-    #drill_fields: [statecd,datasource_name,sum_active_puid_cnt]
-    link: {
-      label: "fips Drilldown"
-      #url:"https://sandbox-lookerbi.corelogic.net/dashboards/64?Fips%20Drill"
-    }
   }
 
   measure: sum_corrected_puid_cnt {
