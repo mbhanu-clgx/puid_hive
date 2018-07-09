@@ -1,5 +1,5 @@
 connection: "dev_emr_02_hive"
-
+# test to check github changes
 # include all the views
 include: "*.view"
 
