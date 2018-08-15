@@ -1,4 +1,4 @@
-connection: "dev_emr_02_hive"
+connection: "emr-production-puid"
 
 include: "*.view.lkml"         # include all views in this project
 include: "*.dashboard.lookml"  # include all dashboards in this project

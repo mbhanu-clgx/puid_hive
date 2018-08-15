@@ -1,4 +1,4 @@
-connection: "dev_emr_02_hive"
+connection: "emr-production-puid"
 include: "*.view"
 
 # include all the dashboards
