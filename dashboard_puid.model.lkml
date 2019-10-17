@@ -1,5 +1,6 @@
 #connection: "emr-production-puid"
-connection: "gcp-dev-hive-enrichment"
+#connection: "gcp-dev-hive-enrichment"
+connection: "gcp-prd-hive-enrichment"
 include: "*.view"
 
 # include all the dashboards
